@@ -18,7 +18,7 @@ pip install SoundFile torchaudio torch pyyaml click matplotlib librosa pyworld
 ```bash
 python train.py --config_path ./Configs/config.yml
 ```
-Please specify the training and validation data in `config.yml` file. The data list format needs to be `filename.wav|anything`, see [train_list.txt](https://github.com/yl4579/StarGANv2-VC/blob/main/Data/train_list.txt) as an example (a subset for LJSpeech). Note that you can put anything after the filename because the training labels are generated ad-hoc.
+Please specify the training and validation data in `config.yml` file. The data list format needs to be `filename.wav|anything`, see [train_list.txt](https://github.com/yl4579/StarGANv2-VC/blob/main/Data/train_list.txt) as an example (a subset of VCTK). Note that you can put anything after the filename because the training labels are generated ad-hoc.
 
 Checkpoints and Tensorboard logs will be saved at `log_dir`. To speed up training, you may want to make `batch_size` as large as your GPU RAM can take. 
 
