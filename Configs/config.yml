@@ -1,0 +1,17 @@
+log_dir: "Checkpoint"
+save_freq: 10
+device: "cuda"
+epochs: 100
+batch_size: 64
+pretrained_model: ""
+train_data: "Data/train_list.txt"
+val_data: "Data/val_list.txt"
+num_workers: 16
+
+  
+optimizer_params:
+  lr: 0.0003
+  
+loss_params:
+  lambda_f0: 0.1
+  
