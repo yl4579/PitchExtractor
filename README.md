@@ -1,4 +1,4 @@
-# PitchExtractor
+# JDC-PitchExtractor
 This repo contains the training code for deep neural pitch extractor for Voice Conversion (VC) and TTS used in [StarGANv2-VC](https://github.com/yl4579/StarGANv2-VC) and [StyleTTS](https://github.com/yl4579/StyleTTS). 
 
 ## Pre-requisites
