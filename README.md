@@ -27,8 +27,10 @@ Since both `harvest` and `dio` are relatively slow, we do have to save the compu
 
 ### F0 Computation Details
 In MelDataset.py, the F0 curves are computated using [PyWorld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder), one using `harvest` and another using `dio`. Both methods are acoustic-based and are unstable under certain conditions. `harvest` is faster but fails more than `dio`, so we first try `harvest`. When `harvest` fails (determined by number of frames with non-zero values), it will compute the ground truth F0 labels with `dio`. If `dio` fails, the computed F0 will have `NaN` and will be replaced with 0. This is supposed to occur only occasionally and should not affect training because these samples are treated as noises by the neural network and deep learning models are kwown to even benefit from slightly noisy datasets. However, if a lot of your samples has this problem (say > 5%), please remove them from the training set so that the model does not learn from the failed examples. 
- 
+
+### Data Augmentation
+Data augmentation is not included in this code. For better voice conversion results, please add your own data augmentation in MelDataset.py with [audiomentations](https://github.com/iver56/audiomentations).
+
 ## References
 - [keums/melodyExtraction_JDC](https://github.com/keums/melodyExtraction_JDC)
 - [kan-bayashi/ParallelWaveGAN](https://github.com/kan-bayashi/ParallelWaveGAN)
-
