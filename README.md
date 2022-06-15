@@ -6,7 +6,7 @@ This repo contains the training code for deep neural pitch extractor for Voice C
 2. Clone this repository:
 ```bash
 git https://github.com/yl4579/PitchExtractor.git
-cd AuxiliaryASR
+cd PitchExtractor
 ```
 3. Install python requirements: 
 ```bash
