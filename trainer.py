@@ -145,8 +145,8 @@ class Trainer(object):
         self.scheduler.step()
         
         return {'loss': loss.item(),
-                'f0': loss_sil.item(),
-                'sil': loss_f0.item()}
+                'f0': loss_f0.item(),
+                'sil': loss_sil.item()}
 
     def _train_epoch(self):
         train_losses = defaultdict(list)
