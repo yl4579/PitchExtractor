@@ -149,6 +149,7 @@ class Trainer(object):
                 'sil': loss_sil.item()}
 
     def _train_epoch(self):
+        self.epochs += 1
         train_losses = defaultdict(list)
         self.model.train()
         for train_steps_per_epoch, batch in enumerate(tqdm(self.train_dataloader, desc="[train]"), 1):
